@@ -1,9 +1,9 @@
-global using EcommerceDDD.Core.CQRS.CommandHandling;
-global using EcommerceDDD.Core.Exceptions;
-global using EcommerceDDD.Core.CQRS.QueryHandling;
-global using EcommerceDDD.Core.Domain;
-global using EcommerceDDD.Core.EventBus;
-global using EcommerceDDD.Core.Persistence;
+global using EcomLibrary.Core.CQRS.CommandHandling;
+global using EcomLibrary.Core.Exceptions;
+global using EcomLibrary.Core.CQRS.QueryHandling;
+global using EcomLibrary.Core.Domain;
+global using EcomLibrary.Core.EventBus;
+global using EcomLibrary.Core.Persistence;
 global using Marten;
 global using Marten.Events;
 global using Marten.Linq;
@@ -23,3 +23,4 @@ global using System.Linq;
 global using System.Reflection;
 global using System.Threading;
 global using System.Threading.Tasks;
+
