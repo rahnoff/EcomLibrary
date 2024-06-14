@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0238B939-D95E-493B-8AB5-C6C34D24E4FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceDDD.Core", "EcommerceDDD.Core\EcommerceDDD.Core.csproj", "{A8F59F2D-8F10-4C36-B28E-524E544034AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcomLibrary.Core", "src\EcomLibrary.Core\EcomLibrary.Core.csproj", "{8D55E5BD-5018-4346-B2EB-F654BE941D49}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcomLibrary.Infrastructure", "src\EcomLibrary.Infrastructure\EcomLibrary.Infrastructure.csproj", "{981F6477-0053-46E0-987E-A10F9E97A614}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceDDD.Core.Infrastructure", "EcommerceDDD.Core.Infrastructure\EcommerceDDD.Core.Infrastructure.csproj", "{0C65ADE4-6A43-402A-949F-28ED8B0FE95B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,17 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D55E5BD-5018-4346-B2EB-F654BE941D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D55E5BD-5018-4346-B2EB-F654BE941D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D55E5BD-5018-4346-B2EB-F654BE941D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D55E5BD-5018-4346-B2EB-F654BE941D49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{981F6477-0053-46E0-987E-A10F9E97A614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{981F6477-0053-46E0-987E-A10F9E97A614}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{981F6477-0053-46E0-987E-A10F9E97A614}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{981F6477-0053-46E0-987E-A10F9E97A614}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{8D55E5BD-5018-4346-B2EB-F654BE941D49} = {0238B939-D95E-493B-8AB5-C6C34D24E4FB}
-		{981F6477-0053-46E0-987E-A10F9E97A614} = {0238B939-D95E-493B-8AB5-C6C34D24E4FB}
+		{A8F59F2D-8F10-4C36-B28E-524E544034AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F59F2D-8F10-4C36-B28E-524E544034AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F59F2D-8F10-4C36-B28E-524E544034AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F59F2D-8F10-4C36-B28E-524E544034AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C65ADE4-6A43-402A-949F-28ED8B0FE95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C65ADE4-6A43-402A-949F-28ED8B0FE95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C65ADE4-6A43-402A-949F-28ED8B0FE95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C65ADE4-6A43-402A-949F-28ED8B0FE95B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
