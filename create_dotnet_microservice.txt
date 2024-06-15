@@ -1,0 +1,52 @@
+dotnet new sln -n EcomCustomerManagement -o .
+
+dotnet new gitignore
+
+dotnet new webapi \
+  -au 'None' \
+  -controllers 'true' \
+  -f 'net8.0' \
+  -lang 'C#' \
+  -n EcomCustomerManagement.API \
+  -o src/EcomCustomerManagement.API \
+  --no-https 'true' \
+  --no-openapi 'false' \
+  --use-program-main 'true'
+
+dotnet sln *sln add src/*API/*csproj
+
+dotnet new xunit -n EcomCustomerManagement.API.Tests -o src/EcomCustomerManagement.API.Tests
+
+dotnet new xunit \
+  -f 'net8.0' \
+  -lang 'C#' \
+  -n EcomCustomerManagement.API.Tests \
+  -o tests/EcomCustomerManagement.API.Tests
+
+dotnet sln *sln add tests/EcomCustomerManagement.API.Tests/*csproj
+
+dotnet add tests/*API.Tests/*csproj reference src/*API/*csproj
+
+dotnet new classlib \
+  -f 'net8.0' \
+  -lang 'C#' \
+  -n EcomCustomerManagement.Domain \
+  -o src/EcomCustomerManagement.Domain
+
+dotnet sln *sln add src/*Domain/*csproj
+
+# Adding packages
+dotnet add package Marten --version 7.19.1
+
+# NuGet commands
+dotnet pack
+
+dotnet nuget add source http://nexus-server:8081/repository/nuget-hosted/ \
+  --name Nexus \
+  --username username \
+  --password password \
+  --store-password-in-clear-text
+
+dotnet nuget push /full/path/to/EcomLibrary/EcommerceDDD.Core/bin/Release/EcommerceDDD.Core.1.0.0.nupkg \
+  -k string_of_numebrs_and_letters \
+  -s http://nexus-server:8081/repository/nuget-hosted/
